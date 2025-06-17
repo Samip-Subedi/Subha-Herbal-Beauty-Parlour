@@ -1,0 +1,351 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Black & White Mode */
+.bw-mode {
+  filter: grayscale(100%);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d1002c;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a00024;
+}
+
+/* Bulb Button */
+#bw-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+/* Carousel Section */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: margin-left 0.6s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Hide Radio Buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Dot Navigation */
+.nav-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot:hover {
+  opacity: 1;
+}
+
+/* Carousel Control */
+#img-1:checked ~ .slides {
+  margin-left: 0%;
+}
+#img-2:checked ~ .slides {
+  margin-left: -100%;
+}
+#img-3:checked ~ .slides {
+  margin-left: -200%;
+}
+
+/* Services Section */
+.services {
+  padding: 60px 10%;
+  text-align: center;
+  background: #fff0f4;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #c2185b;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-box h3 {
+  color: #d1002c;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 15px;
+  color: #444;
+}
+
+/* Advanced Services Section */
+.advanced-services {
+  padding: 60px 10%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.advanced-services h2 {
+  font-size: 36px;
+  color: #c2185b;
+  margin-bottom: 30px;
+}
+
+/* Tabs Styling */
+.tabs {
+  width: 100%;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tab-label {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 24px;
+  background-color: #d1002c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.tab-label:hover {
+  background-color: #a00024;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Show active tab */
+#tab1:checked ~ .tab-label[for="tab1"],
+#tab2:checked ~ .tab-label[for="tab2"] {
+  background-color: #a00024;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+/* Advanced Grid (2x2) */
+.advanced-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.box {
+  background: #fff0f4;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  border-left: 5px solid #d1002c;
+  transition: transform 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box h3 {
+  margin-bottom: 10px;
+  color: #d1002c;
+}
+
+.box p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 10px;
+  background: #000;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.special { background: #c2185b; }
+.new     { background: #1976d2; }
+.hot     { background: #ef5350; }
+.popular { background: #8e24aa; }
+
+/* Contact Us Form */
+.contact-us {
+  padding: 60px 10%;
+  background-color: #fff0f4;
+  text-align: center;
+}
+
+.contact-us h2 {
+  color: #c2185b;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d1002c;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #d1002c;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #a00024;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carousel,
+  .slide img {
+    height: 60vh;
+  }
+
+  .tab-label {
+    margin: 10px 5px;
+  }
+
+  .advanced-grid {
+    grid-template-columns: 1fr;
+  }
+}

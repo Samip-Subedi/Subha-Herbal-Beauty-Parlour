@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subha Herbal Beauty Parlour</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/logoo.png" alt="Subha Herbal Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Bulb Button -->
+    <button id="bw-toggle" aria-label="Toggle black and white mode" title="Toggle black and white mode">
+      <img src="images/bulb-icon.png" alt="Toggle Black & White" style="width:24px; height:24px;" />
+    </button>
+  </header>
+
+  <!-- Carousel Section -->
+  <section class="carousel">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <input type="radio" name="radio-btn" id="img-2" />
+    <input type="radio" name="radio-btn" id="img-3" />
+
+    <div class="slides">
+      <div class="slide first">
+        <img src="gallery1.jpg" alt="Gallery 1" />
+      </div>
+      <div class="slide">
+        <img src="gallery2.jpg" alt="Gallery 2" />
+      </div>
+      <div class="slide">
+        <img src="gallery3.jpg" alt="Gallery 3" />
+      </div>
+    </div>
+
+    <div class="nav-dots">
+      <label for="img-1" class="dot"></label>
+      <label for="img-2" class="dot"></label>
+      <label for="img-3" class="dot"></label>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-box">
+        <h3>Professional Makeup</h3>
+        <p>Makeup can have a magical effect when performed by real masters.</p>
+      </div>
+      <div class="service-box">
+        <h3>Painless Depilation</h3>
+        <p>Beauty sometimes requires pain, but depilation with us can be pain-free.</p>
+      </div>
+      <div class="service-box">
+        <h3>Haircut and Styling</h3>
+        <p>It is not just a job, it is art and pleasure to work with woman’s hair.</p>
+      </div>
+      <div class="service-box">
+        <h3>Eyelash Extensions</h3>
+        <p>Nothing can grant a woman such charm as long curved eyelashes.</p>
+      </div>
+      <div class="service-box">
+        <h3>Professional Stylists</h3>
+        <p>It is not always about the tools but the hands that use them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Services -->
+  <section class="advanced-services">
+    <h2>Advanced Services</h2>
+
+    <div class="tabs">
+      <input type="radio" name="tabs" id="tab1" checked />
+      <input type="radio" name="tabs" id="tab2" />
+      <label for="tab1" class="tab-label">Depilation</label>
+      <label for="tab2" class="tab-label">Eyelash Extension</label>
+
+      <div class="tab-content" id="content1">
+        <div class="advanced-grid">
+          <div class="box">
+            <span class="badge special">SPECIAL</span>
+            <h3>IPL Hair Removal</h3>
+            <p>Hair removal, also known as epilation or depilation, is the deliberate removal of body hair.</p>
+          </div>
+          <div class="box">
+            <h3>Electrolysis</h3>
+            <p>Electricity is delivered to the follicle through the probe, causing localized damage to hair roots.</p>
+          </div>
+          <div class="box">
+            <span class="badge new">NEW</span>
+            <h3>Sugaring</h3>
+            <p>Persian waxing using honey, used since 1900 BC for hair removal.</p>
+          </div>
+          <div class="box">
+            <h3>Waxing</h3>
+            <p>Removes hair from the root. New hair does not grow back for 4-6 weeks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="content2">
+        <div class="advanced-grid">
+          <div class="box">
+            <span class="badge hot">HOT</span>
+            <h3>Creative Eyelashes</h3>
+            <p>Wrap your lashes around a brush handle to give the strips some curve.</p>
+          </div>
+          <div class="box">
+            <h3>Extra Long Corners</h3>
+            <p>Darkening lighter brows with a tint one shade darker than natural hair color.</p>
+          </div>
+          <div class="box">
+            <span class="badge popular">POPULAR</span>
+            <h3>Eyebrow Tint</h3>
+            <p>Makes brushing easier and gets to hard-to-reach inner corners.</p>
+          </div>
+          <div class="box">
+            <span class="badge hot">HOT</span>
+            <h3>Eyelash Tint</h3>
+            <p>Enhances eyelash length artificially with tinting methods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Form -->
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    // Black & White Mode Toggle
+    const toggleBtn = document.getElementById('bw-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('bw-mode');
+    });
+  </script>
+
+</body>
+</html>
